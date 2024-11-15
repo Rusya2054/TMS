@@ -24,6 +24,10 @@ public class Task {
 
     @OneToOne(cascade =  CascadeType.REFRESH, fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User author;
+
+    @OneToOne(cascade =  CascadeType.REFRESH, fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User executor;
 
     @Column(name = "comment")
